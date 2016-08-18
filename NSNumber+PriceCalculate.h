@@ -10,15 +10,11 @@
 
 @interface NSNumber (PriceCalculate)
 
-/** 乘 */
 -(NSNumber* )mut:(NSNumber*)num;
-/** 除 */
 -(NSNumber* )div:(NSNumber *)num;
-/** 加 */
 -(NSNumber* )add:(NSNumber *)num;
-/** 减 */
 -(NSNumber* )sub:(NSNumber *)num;
-/** number数据转换为string */
 -(NSString* )toString;
+-(int)toInt;
 
 @end

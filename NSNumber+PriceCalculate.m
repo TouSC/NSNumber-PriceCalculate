@@ -12,7 +12,6 @@
 
 -(NSNumber* )mut:(NSNumber *)num
 {
-    //乘法
     NSDecimalNumber *dec_Num1 = [NSDecimalNumber decimalNumberWithDecimal:[self decimalValue]];
     
     NSDecimalNumber *dec_Num2 = [NSDecimalNumber decimalNumberWithDecimal:[num decimalValue]];
@@ -24,7 +23,6 @@
 
 -(NSNumber* )sub:(NSNumber *)num
 {
-    //减法
     NSDecimalNumber *dec_Num1 = [NSDecimalNumber decimalNumberWithDecimal:[self decimalValue]];
     
     NSDecimalNumber *dec_Num2 = [NSDecimalNumber decimalNumberWithDecimal:[num decimalValue]];
@@ -36,7 +34,6 @@
 
 -(NSNumber* )add:(NSNumber *)num
 {
-    //加法
     NSDecimalNumber *dec_Num1 = [NSDecimalNumber decimalNumberWithDecimal:[self decimalValue]];
     
     NSDecimalNumber *dec_Num2 = [NSDecimalNumber decimalNumberWithDecimal:[num decimalValue]];
@@ -48,7 +45,6 @@
 
 -(NSNumber* )div:(NSNumber *)num
 {
-    //除法
     NSDecimalNumber *dec_Num1 = [NSDecimalNumber decimalNumberWithDecimal:[self decimalValue]];
     
     NSDecimalNumber *dec_Num2 = [NSDecimalNumber decimalNumberWithDecimal:[num decimalValue]];
@@ -58,12 +54,16 @@
     return result_Num;
 }
 
-//转换为两位数的String
 -(NSString* )toString;
 {
     double doubelNumber = [self doubleValue];
     NSString* stringNumber = [NSString stringWithFormat:@"%.2f",doubelNumber];
     return stringNumber;
+}
+
+-(int)toInt;
+{
+    return [[NSString stringWithFormat:@"%.0f",[self doubleValue]] intValue];
 }
 
 @end
